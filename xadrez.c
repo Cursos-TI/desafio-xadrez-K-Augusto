@@ -4,6 +4,33 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+//Movimentação da Torre usando função recursiva
+void MoverTorre(int i){
+    if(i > 0){
+        printf("Direita\n");
+        MoverTorre (i- 1);
+    }
+} 
+
+//Movimentação do Bispo usando função recursiva e loop aninhado
+void MoverBispo(int n){
+    for(int j = 0; j < n; j++){ //controla o movimento vertical
+        printf("\nCima\n");
+        for(int k = 0; k < 1; k++){//controla o movimento horizontal
+            printf("Direita");
+        }
+        printf("\n");//pula uma linha
+    }
+}
+
+//Movimentação da Rainha usando função recursiva
+void MoverRainha(int l){
+    if(l > 0){
+        printf("Esquerda\n");
+        MoverRainha (l - 1);
+    }
+}
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -28,49 +55,30 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    //Movimentação da Torre usando a estrutura de repetição for - 5 casas para a direita
-
-    printf("Movimentação do tabuleiro de xadrez, peça - Torre.:\n\n");
-
-    for(int i = 0; i <= 4; i++){
-        printf("Direita\n");
-    }
-
-    //Movimentação do Bispo usando a estrutura de repetição while - 5 casas na diagonal direita
-
-    printf("\nMovimentação do tabuleiro de xadrez, peça - Bispo.:\n\n");
-
-    int j = 0;
-
-    while(j <= 4){
-        printf("Cima, Direita\n");
-        j++;
-    }
-
-    //Movimentação da Rainha usando a estrutura de repetição do while - 8 casas para a esquerda
-
-    printf("\nMovimentação do tabuleiro de xadrez, peça - Rainha.:\n\n");
-
-    int k = 0;
-
-    do{
-        printf("Esquerda\n");
-        k++;
-    }while(k <= 7);
-
-    //Movimentação do Cavalo usando loop aninhado - 2 casas para baixo e 1 para a esquerda
+    //Identificando e separando as movimentações das peças, e chamando as funções recursivas
+    printf("Movimentação da Torre.:\n\n");
+    MoverTorre(5);
+    printf("\n------------------------------------------------------------\n");
+    printf("\nMovimentação do Bispo.:\n");
+    MoverBispo(5);
+    printf("\n------------------------------------------------------------\n");
+    printf("\nMovimentação da Rainha.:\n\n");
+    MoverRainha(8);
+    
+    //Movimentação do Cavalo usando loop aninhado - 2 casas para cima e 1 para a direita
 
     printf("\n------------------------------------------------------------\n");
-    printf("\nMovimentação do tabuleiro de xadrez, peça - Cavalo.:\n\n");
+    printf("\nMovimentação do Cavalo.:\n\n");
 
-    int movimentoCavalo = 1;
+    int MovimentoCavalo = 1;
 
-    while(movimentoCavalo --){
+    do{
         for(int l = 0; l < 2; l++){
-            printf("Baixo\n");
+            printf("Cima\n");
         }
-        printf("Esquerda\n");
-    }
+        printf("Direita\n");
+        MovimentoCavalo--;
+    }while(MovimentoCavalo > 0);
 
     return 0;
 }
