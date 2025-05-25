@@ -28,7 +28,7 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    //Movimentação da Torre usando a estrutura de repetição for
+    //Movimentação da Torre usando a estrutura de repetição for - 5 casas para a direita
 
     printf("Movimentação do tabuleiro de xadrez, peça - Torre.:\n\n");
 
@@ -36,7 +36,7 @@ int main() {
         printf("Direita\n");
     }
 
-    //Movimentação do Bispo usando a estrutura de repetição while
+    //Movimentação do Bispo usando a estrutura de repetição while - 5 casas na diagonal direita
 
     printf("\nMovimentação do tabuleiro de xadrez, peça - Bispo.:\n\n");
 
@@ -46,6 +46,17 @@ int main() {
         printf("Cima, Direita\n");
         j++;
     }
+
+    //Movimentação da Rainha usando a estrutura de repetição do while - 8 casas para a esquerda
+
+    printf("\nMovimentação do tabuleiro de xadrez, peça - Rainha.:\n\n");
+
+    int l = 0;
+
+    do{
+        printf("Esquerda\n");
+        l++;
+    }while(l <= 7);
 
     return 0;
 }
