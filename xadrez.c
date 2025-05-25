@@ -51,12 +51,26 @@ int main() {
 
     printf("\nMovimentação do tabuleiro de xadrez, peça - Rainha.:\n\n");
 
-    int l = 0;
+    int k = 0;
 
     do{
         printf("Esquerda\n");
-        l++;
-    }while(l <= 7);
+        k++;
+    }while(k <= 7);
+
+    //Movimentação do Cavalo usando loop aninhado - 2 casas para baixo e 1 para a esquerda
+
+    printf("\n------------------------------------------------------------\n");
+    printf("\nMovimentação do tabuleiro de xadrez, peça - Cavalo.:\n\n");
+
+    int movimentoCavalo = 1;
+
+    while(movimentoCavalo --){
+        for(int l = 0; l < 2; l++){
+            printf("Baixo\n");
+        }
+        printf("Esquerda\n");
+    }
 
     return 0;
 }
