@@ -32,7 +32,7 @@ int main() {
 
     printf("Movimentação do tabuleiro de xadrez, peça - Torre.:\n\n");
 
-    for(int i = 1; i <= 5; i++){
+    for(int i = 0; i <= 4; i++){
         printf("Direita\n");
     }
 
@@ -40,9 +40,9 @@ int main() {
 
     printf("\nMovimentação do tabuleiro de xadrez, peça - Bispo.:\n\n");
 
-    int j = 1;
+    int j = 0;
 
-    while(j <= 5){
+    while(j <= 4){
         printf("Cima, Direita\n");
         j++;
     }
